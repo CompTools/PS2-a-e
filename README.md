@@ -5,8 +5,8 @@ This is a group project.
 You should work in groups of 2 to 4 (not alone and not more than 4). If this is a problem, please let me know ahead of time.
 
 ### Please enter the names of the group members here:
-1. 
-1. 
+1. Elizabeth Gonzalez
+1. Aaron Rosenfeld
 1. 
 1. 
 
@@ -23,6 +23,20 @@ I have provided a dataset that you will use for this. The dataset and it's descr
 
 The goal of this project is to write a Bash script that does the following:
 1. Counts the number of flights that were delayed more than 15 minutes into or out of Gainesville, FL (airport code GNV) during the timeframe covered by the dataset. (*2 points*)
+
+#count late flights
+late_flights=o
+grep GNV /ufrc/bsc4452/share/Class_Files/data/flights.May2017-Apr2018.csv | cut -f 16 -d "," \
+| while read i
+do
+if [ "$i" == "1.00" ]
+then
+late_flights=$((late_flights+1))
+fi
+
+echo "Late flights: $late_flights"
+done
+
 2. Produce a table (text is fine) with the data to fill in this table (*13 points*):
 
 
