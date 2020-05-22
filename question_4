@@ -1,0 +1,1 @@
+awk 'BEGIN {FS=","} {print $4,",",$5}' /ufrc/bsc4452/share/Class_Files/data/flights.May2017-Apr2018.csv | sort -u | grep FL
