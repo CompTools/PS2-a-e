@@ -1,0 +1,1 @@
+cat /ufrc/bsc4452/share/Class_Files/data/flights.May2017-Apr2018.csv | awk 'BEGIN {FS=","} {print $3}' | sort -u
