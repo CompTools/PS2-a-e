@@ -1,1 +1,1 @@
-awk 'BEGIN {FS=","} {print $4,",",$5}' /ufrc/bsc4452/share/Class_Files/data/flights.May2017-Apr2018.csv | sort -u | grep FL
+awk 'BEGIN {FS=","} NR<2 {print $4;next} {print $4","$5 | "sort -u"}' /ufrc/bsc4452/share/Class_Files/data/flights.May2017-Apr2018.csv | grep 'FL\|ORIGIN_CITY_NAME'
